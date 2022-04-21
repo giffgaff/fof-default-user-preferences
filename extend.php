@@ -24,6 +24,18 @@ return [
                     true
                 );
             }
+            $event->user->setPreference(
+                User::getNotificationPreferenceKey("newPostInTag", 'email'),
+                false
+            );
+            $event->user->setPreference(
+                User::getNotificationPreferenceKey("newDiscussionInTag", 'email'),
+                false
+            );
+            $event->user->setPreference(
+                User::getNotificationPreferenceKey("newDiscussionTag", 'email'),
+                false
+            );
 
             $event->user->setPreference('followAfterReply', true);
 
